@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="onthego" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city_road" translatesAutoresizingMaskIntoConstraints="NO" id="mpK-qU-3mF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="tintColor" red="1" green="0.18218815199999999" blue="0.1242850316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgh-11-ThV">
+                                <rect key="frame" x="74" y="101" width="226" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.35356177049999998" blue="0.5572295451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <color key="tintColor" red="1" green="0.18218815200043748" blue="0.12428503163488969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start Exploring">
+                                    <color key="titleColor" red="0.99842934090000002" green="0.99904260389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="exploreClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCw-r0-izy"/>
+                                    <segue destination="oc0-CR-x3y" kind="show" identifier="started" id="wGM-HS-GS7"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Explora_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-Ut-Bgf">
+                                <rect key="frame" x="-13" y="413" width="400" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="2sE-KF-9dy"/>
+                                    <constraint firstAttribute="width" constant="400" id="j6S-Sk-lBi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y6R-Ut-Bgf" secondAttribute="bottom" constant="107" id="3s9-aD-H7T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mpK-qU-3mF" secondAttribute="bottom" id="DEa-EP-weo"/>
+                            <constraint firstItem="Mgh-11-ThV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="DRm-C2-y3I"/>
+                            <constraint firstItem="mpK-qU-3mF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EuD-F2-f2p"/>
+                            <constraint firstItem="mpK-qU-3mF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ld9-aJ-Aog"/>
+                            <constraint firstItem="Y6R-Ut-Bgf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SkM-Hf-17q"/>
+                            <constraint firstItem="Mgh-11-ThV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="81" id="V6C-46-0aj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mgh-11-ThV" secondAttribute="trailing" constant="59" id="cQQ-W4-hf3"/>
+                            <constraint firstAttribute="trailing" secondItem="mpK-qU-3mF" secondAttribute="trailing" id="qcw-g8-g76"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exploreNow" destination="Mgh-11-ThV" id="OmO-Pa-3gz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="dYH-18-rCe">
+            <objects>
+                <viewController id="oc0-CR-x3y" customClass="SecondViewController" customModule="onthego" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="evf-Rr-ezL"/>
+                        <viewControllerLayoutGuide type="bottom" id="mrR-Sy-0bq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xGs-Th-kMu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBR-6B-mqM">
+                                <rect key="frame" x="104" y="223" width="166" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Exploring"/>
+                                <connections>
+                                    <action selector="onclick:" destination="oc0-CR-x3y" eventType="touchUpInside" id="SDV-an-lbh"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="volume_Button" translatesAutoresizingMaskIntoConstraints="NO" id="mpc-Io-eF8">
+                                <rect key="frame" x="112" y="55" width="150" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="faneuil_hall" translatesAutoresizingMaskIntoConstraints="NO" id="sDz-Jx-uNP">
+                                <rect key="frame" x="0.0" y="335" width="375" height="332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npt-Rf-8tt">
+                                <rect key="frame" x="0.0" y="617" width="375" height="42"/>
+                                <color key="backgroundColor" red="0.9997907280921936" green="0.63804006576538086" blue="0.16540706157684326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="F0u-Qk-qx6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Explore More">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onexploremore:" destination="oc0-CR-x3y" eventType="touchUpInside" id="0eC-EF-CQH"/>
+                                    <segue destination="X4H-JJ-FSg" kind="show" identifier="info" id="yb6-25-qGF"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boston_common" translatesAutoresizingMaskIntoConstraints="NO" id="Iph-hZ-MhB">
+                                <rect key="frame" x="0.0" y="335" width="375" height="332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="keb-RA-Nv3"/>
+                                    <constraint firstAttribute="height" constant="332" id="rnR-ND-6aA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mrR-Sy-0bq" firstAttribute="top" secondItem="Iph-hZ-MhB" secondAttribute="bottom" id="BNI-ge-JHy"/>
+                            <constraint firstItem="Iph-hZ-MhB" firstAttribute="leading" secondItem="xGs-Th-kMu" secondAttribute="leading" id="Mvq-Pn-BkA"/>
+                            <constraint firstItem="npt-Rf-8tt" firstAttribute="centerX" secondItem="xGs-Th-kMu" secondAttribute="centerX" id="Q67-z3-3Ed"/>
+                            <constraint firstAttribute="trailing" secondItem="Iph-hZ-MhB" secondAttribute="trailing" id="Urg-bn-4MT"/>
+                            <constraint firstAttribute="trailing" secondItem="npt-Rf-8tt" secondAttribute="trailing" id="a3I-ye-fef"/>
+                            <constraint firstItem="mrR-Sy-0bq" firstAttribute="top" secondItem="npt-Rf-8tt" secondAttribute="bottom" constant="8" id="f3E-r6-Ic5"/>
+                            <constraint firstItem="npt-Rf-8tt" firstAttribute="leading" secondItem="xGs-Th-kMu" secondAttribute="leading" id="sP6-j8-bfM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="boston_common" destination="Iph-hZ-MhB" id="SzI-If-9wV"/>
+                        <outlet property="clicked" destination="oBR-6B-mqM" id="91e-Zo-38B"/>
+                        <outlet property="explore" destination="npt-Rf-8tt" id="Wv6-zX-FFk"/>
+                        <outlet property="fenuihall" destination="sDz-Jx-uNP" id="ie7-Ad-D6b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boR-rs-UcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="36.431784107946029"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="ffL-Hq-3OJ">
+            <objects>
+                <viewController id="X4H-JJ-FSg" customClass="ThirdViewController" customModule="onthego" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3dl-nb-Vfv"/>
+                        <viewControllerLayoutGuide type="bottom" id="4rA-ox-IYW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wmp-ly-fF1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faneuil_hall" translatesAutoresizingMaskIntoConstraints="NO" id="5P7-3R-9IK">
+                                <rect key="frame" x="-292.5" y="0.0" width="960" height="1280"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events" translatesAutoresizingMaskIntoConstraints="NO" id="pzh-jY-VJX">
+                                <rect key="frame" x="-39" y="340" width="453" height="319"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="453" id="2ej-3G-xcp"/>
+                                    <constraint firstAttribute="height" constant="319" id="ceS-Sh-7nn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x11-PZ-e6N">
+                                <rect key="frame" x="16" y="20" width="148" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.48843779211622118" blue="0.42214521216107415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Keep Exploring">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backclicked:" destination="X4H-JJ-FSg" eventType="touchUpInside" id="BhW-vB-7SH"/>
+                                    <segue destination="oc0-CR-x3y" kind="show" identifier="back1" id="KBh-WC-knm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pzh-jY-VJX" firstAttribute="centerX" secondItem="Wmp-ly-fF1" secondAttribute="centerX" id="6CR-IM-0ts"/>
+                            <constraint firstItem="5P7-3R-9IK" firstAttribute="centerX" secondItem="Wmp-ly-fF1" secondAttribute="centerX" id="9qk-4O-aeU"/>
+                            <constraint firstAttribute="trailing" secondItem="pzh-jY-VJX" secondAttribute="trailing" constant="-39" id="AUV-Uh-2HP"/>
+                            <constraint firstItem="5P7-3R-9IK" firstAttribute="top" secondItem="Wmp-ly-fF1" secondAttribute="top" id="big-qG-PLL"/>
+                            <constraint firstItem="4rA-ox-IYW" firstAttribute="top" secondItem="pzh-jY-VJX" secondAttribute="bottom" constant="8" id="c14-Jz-v9N"/>
+                            <constraint firstItem="pzh-jY-VJX" firstAttribute="leading" secondItem="Wmp-ly-fF1" secondAttribute="leading" constant="-39" id="y0G-Gg-yd8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beackbutton" destination="x11-PZ-e6N" id="Thi-L7-NqU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dB8-hv-Yz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1480.8" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Explora_logo" width="400" height="400"/>
+        <image name="boston_common" width="550" height="374"/>
+        <image name="city_road" width="400" height="800"/>
+        <image name="events" width="592" height="574"/>
+        <image name="faneuil_hall" width="960" height="1280"/>
+        <image name="volume_Button" width="256" height="256"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wGM-HS-GS7"/>
+    </inferredMetricsTieBreakers>
+</document>
